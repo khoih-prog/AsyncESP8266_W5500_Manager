@@ -24,8 +24,6 @@
   * [Use Arduino Library Manager](#use-arduino-library-manager)
   * [Manual Install](#manual-install)
   * [VS Code & PlatformIO](#vs-code--platformio)
-* [Libraries' Patches](#libraries-patches)
-  * [1. For ESPAsyncWebServer library](#1-for-espasyncwebserver-library) 
 * [HOWTO Fix `Multiple Definitions` Linker Error](#howto-fix-multiple-definitions-linker-error)
 * [How It Works](#how-it-works)
 * [HOWTO Basic configurations](#howto-basic-configurations)
@@ -200,8 +198,6 @@ in many files. But be sure to use the following `#include <AsyncESP8266_W5500_Ma
 #include <AsyncESP8266_W5500_Manager.h>          //https://github.com/khoih-prog/AsyncESP8266_W5500_Manager
 ```
 
-Check [Async_ConfigOnDoubleReset_Multi](examples/Async_ConfigOnDoubleReset_Multi) for an example how and where to do so.
-
 Have a look at the discussion in [Different behaviour using the src_cpp or src_h lib #80](https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/discussions/80)
 
 ---
@@ -321,7 +317,7 @@ then connect `WebBrowser` to configurable ConfigPortal IP address, e.g. `192.168
 #include <ESP_DoubleResetDetector.h>      //https://github.com/khoih-prog/ESP_DoubleResetDetector
 
 // Number of seconds after reset during which a
-// subseqent reset will be considered a double reset.
+// subsequent reset will be considered a double reset.
 #define DRD_TIMEOUT 10
 
 // RTC Memory Address for the DoubleResetDetector to use
@@ -1459,7 +1455,7 @@ void loop()
     Serial.println(F("\nConfiguration portal requested."));
     digitalWrite(LED_BUILTIN, LED_ON); // turn the LED on by making the voltage LOW to tell us we are in configuration mode.
 
-    //Local intialization. Once its business is done, there is no need to keep it around
+    //Local initialization. Once its business is done, there is no need to keep it around
     // Use this to default DHCP hostname to ESP8266-XXXXXX
     //AsyncESP8266_W5500_Manager AsyncESP8266_W5500_manager(&webServer, &dnsServer);
     // Use this to personalize DHCP hostname (RFC952 conformed)

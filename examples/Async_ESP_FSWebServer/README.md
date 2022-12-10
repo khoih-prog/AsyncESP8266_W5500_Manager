@@ -10,20 +10,20 @@ Connect to Config Portal @ the localIP address, e.g. `192.168.2.186`
 You'll see this `Main` page:
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/AsyncESP32_W5500_Manager/raw/main/Images/Main.png">
+    <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/Images/Main.png">
 </p>
 
 Select `Information` to enter the Info page where the board info will be shown (long page)
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/AsyncESP32_W5500_Manager/raw/main/Images/Info.png">
+    <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/Images/Info.png">
 </p>
 
 
 Select `Configuration` to enter this page where you can select an AP and specify its WiFi Credentials
 
 <p align="center">
-    <img src="https://github.com/khoih-prog/AsyncESP32_W5500_Manager/raw/main/Images/Configuration_Standard.png">
+    <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/Images/Configuration_Standard.png">
 </p>
 
 Enter your credentials, then click `Save`.
@@ -63,7 +63,7 @@ Ubuntu$ for file in \`\ls -A1\`; do curl -F "file=@$PWD/$file" http://async-esp8
     <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/examples/Async_ESP_FSWebServer/pics/async-esp8266fs.local.png">
 </p>
 
-4. Edit / Delete / Download any file in the the folder by going to http://async-esp8266fs.local/edit
+4. Edit / Delete / Download any file in the the folder by going to http://async-esp8266fs.local/edit.htm
 
 <p align="center">
     <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/examples/Async_ESP_FSWebServer/pics/async-esp8266fs.local_edit.png">
