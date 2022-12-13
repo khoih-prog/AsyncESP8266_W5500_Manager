@@ -77,7 +77,8 @@
   * [Custom Parameters](#custom-parameters)
   * [Custom IP Configuration](#custom-ip-configuration) 
     * [Custom Station (client) Static IP Configuration](#custom-station-client-static-ip-configuration)
-  * [Custom HTML, CSS, Javascript](#custom-html-css-javascript) 
+  * [Custom HTML, CSS, Javascript](#custom-html-css-javascript)
+* [How to connect W5x00 to ESP8266](#How-to-connect-W5x00-to-ESP8266)
 * [Examples](#examples)
   * [Async_ConfigOnSwitch](examples/Async_ConfigOnSwitch)
   * [Async_ConfigOnSwitchFS](examples/Async_ConfigOnSwitchFS)
@@ -140,8 +141,19 @@ To appreciate the power of the [ESPAsyncWebServer](https://github.com/me-no-dev/
 
 This [**AsyncESP8266_W5500_Manager** library](https://github.com/khoih-prog/AsyncESP8266_W5500_Manager) currently supports these following boards:
 
- 1. **ESP8266_DEV with W5500 boards** using `LwIP W5500 Ethernet`
+ 1. **ESP8266_DEV boards** using `LwIP W5500 Ethernet`
  
+
+
+<p align="center">
+    <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/Images/W5500.png">
+</p>
+
+<p align="center">
+    <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/Images/W5500_small.png">
+</p>
+ 
+  
 ---
 ---
 
@@ -1620,6 +1632,42 @@ Just add the bit you want added as the last parameter to the custom parameter co
 ```cpp
 ESPAsync_EMParameter custom_mqtt_server("server", "mqtt server", "iot.eclipse", 40, " readonly");
 ```
+
+---
+---
+
+
+#### How to connect W5x00 to ESP8266
+
+You can change the `CS/SS` pin to another one. Default is `GPIO16`
+
+Connecting `CS/SS` to `TX0/GPIO15` interferes with uploading firmware to ESP8266. If absolutely necessary to use `TX0/GPIO15`, remove the wire to `TX0/GPIO15` before uploading firmware. Then reconnect after done uploading.
+
+```cpp
+// Using GPIO4, GPIO16, or GPIO5
+#define CSPIN             16
+```
+
+---
+
+
+<p align="center">
+    <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/Images/W5500.png">
+</p>
+
+<p align="center">
+    <img src="https://github.com/khoih-prog/AsyncESP8266_W5500_Manager/raw/main/Images/W5500_small.png">
+</p>
+
+
+|W5x00|<--->|ESP8266|
+|:-:|:-:|:-:|
+|MOSI|<--->|GPIO13|
+|MISO|<--->|GPIO12|
+|SCK|<--->|GPIO14|
+|SS|<--->|GPIO16|
+|GND|<--->|GND|
+|3.3V|<--->|3.3V|
 
 ---
 ---
